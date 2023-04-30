@@ -10,7 +10,7 @@ from telegram.ext import (
 
 import json
 
-TOKEN = ""
+TOKEN = "6056309795:AAFeWIEUeGH_QZqaBlH9If05yVLhJNKC34E"
 
 START, ASK, CONNECT, WAIT = range(4)
 
@@ -51,9 +51,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 		"Siddarth has requested you pay!" ,
         reply_markup = ReplyKeyboardMarkup.from_button(
             KeyboardButton(
-                text="Click to connect wallet"),
-                web_app=WebAppInfo(url="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi7vu3i7dH-AhVKi1wKHab2DMUQtwJ6BAgLEAI&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ&usg=AOvVaw0aHtehaphMhOCAkCydRLZU"),
+                text="Click to connect wallet",
+                web_app=WebAppInfo(url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
         )
+	)
 	)
 	# 	# Keyboard here
 	# 	return EXIT
