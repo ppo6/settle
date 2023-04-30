@@ -7,11 +7,9 @@ from splitwise import Splitwise
 from splitwise.expense import Expense
 from splitwise.user import ExpenseUser
 
-print(os.environ.get("CONSUMER_KEY"))
-
-class SplitwiseTelegramBot(Splitwise):
-	def __init__(self):
-		super().__init__(os.environ.get("CONSUMER_KEY"), os.environ.get("CONSUMER_SECRET"))
+class SplitwiseConnect(Splitwise):
+	def __init__(self,id):
+		super().__init__(os.environ.get("CONSUMER_KEY_"+str(id)), os.environ.get("CONSUMER_SECRET_"+str(id)),api_key=os.environ.get("API_KEY_"+str(id)))
 
 	def get_amount_from_friend(self, friend):
 		return abs(float(friend.getBalances()[0].getAmount()))
